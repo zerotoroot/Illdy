@@ -1,0 +1,105 @@
+@import "../sass/variables";
+
+// Background img
+%bck_img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// Nav
+nav {
+  li {
+    font-size: 20px;
+  }
+}
+// End Nav
+
+// Header
+header {
+  background-image: url(../images/front-page-header.jpg);
+  background-attachment: fixed;
+  @extend %bck_img;
+  padding: 350px 0;
+  h1 {
+    font-size: 60px;
+  }
+  button {
+    border: solid;
+    transition: background-color, border-color 0.3s ease-in-out;
+    &:hover {
+      background-color: rgba(73, 72, 72, 0.555) !important;
+    }
+  }
+  .right {
+    &:hover {
+      border-color: $color_main !important;
+      background-color: $color_main !important;
+    }
+  }
+}
+// End Header
+
+// Main
+main {
+  // About
+  #about {
+    .wrapper {
+      img {
+        transition: transform 0.7s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+  // End About
+
+  // Project
+  #project {
+    img {
+      cursor: pointer;
+      filter: blur(3px);
+      transition: filter 0.7s ease-in-out;
+      &:hover {
+        filter: blur(0);
+      }
+    }
+  }
+  // End Project
+
+  // Testimonials
+  #testimonials {
+    background-image: url(../images/testiomnials-background.jpg);
+    @extend %bck_img;
+    p {
+      background-color: $color_main;
+    }
+  }
+  // End Testimonials
+
+  // News
+  #news {
+    .wrapper {
+      cursor: pointer;
+      img {
+        transition: transform 0.7s ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.3);
+      }
+    }
+  }
+  // End News
+}
+// End Main
+
+// Footer
+footer {
+  li {
+    transition: transform 0.7s ease-in-out;
+    &:hover {
+      transform: translateX(10px);
+    }
+  }
+}
+// End Footer
